@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Roboto&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url(../img/shot-by-cerqueira-0o_GEzyargo-unsplash.jpg);
+  background-size: cover;
+
+  font-size: 1.6rem;
+}
+
+header {
+  text-align: center;
+  width: 54.3rem;
+  height: 12.7rem;
+  margin: 3rem auto 5.5rem auto;
+}
+
+header h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #CCCCCC;
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #CCCCCC;
+}
+
+main {
+  background-color: #f7f7f7;
+  width: 105.5rem;
+  height: 60rem;
+  margin: 0 auto 5rem auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .texto-vertical{
+  transform: rotate(90.26deg);
+  height: 34.9rem;
+}
+
+main #date {
+  align-self: flex-start;
+}
+
+img {
+  width: 59.8rem;
+  height: 38rem;
+}
+
+.input-data {
+  display: flex;
+  border: none;
+  width: 30.6rem;
+  height: 5.4rem;
+
+  margin: 0 auto;
+}
+
+.input-data input {
+  outline: none;
+  border: none;
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.input-data button {
+  display: flex;
+  border: none;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  background: none;
+  cursor: pointer;
+}
