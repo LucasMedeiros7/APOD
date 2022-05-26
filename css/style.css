@@ -74,9 +74,14 @@ main #date {
   margin-bottom: 3rem;
 }
 
+#figure {
+  min-width: 50%;
+  width: 50%;
+}
+
 img {
   width: 100%;
-  height: 38rem;
+  height: 34rem;
 }
 
 iframe {
@@ -124,4 +129,14 @@ iframe {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
   background: none;
   cursor: pointer;
+}
+
+@media (max-width: 780px){
+  #figure{
+    width: 100%;
+  }
+
+  img {
+   width: 100%;
+  }
 }

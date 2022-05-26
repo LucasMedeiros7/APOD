@@ -1,6 +1,6 @@
 $('form').submit(false);
 
-const div = $('figure');
+const div = $('#figure');
 const h2 = $('#titulo');
 const p = $('#texto');
 const datahtml = $('#date')
@@ -10,7 +10,7 @@ function apod() {
   let date = $('#data').val();
 
   $.ajax({
-    url: `https://api.nasa.gov/planetary/apod?api_key=Iy0QFduErGyyBEM7saLdYK0ZtpfW35a1JfJtiCl0date=${date}`,
+    url: `https://api.nasa.gov/planetary/apod?api_key=Iy0QFduErGyyBEM7saLdYK0ZtpfW35a1JfJtiCl0&date=${date}`,
     success(resposta) {
       let titulo = resposta.title;
       let data = resposta.date;
@@ -27,8 +27,6 @@ function apod() {
       } else {
         div.html(`<img src="${img}">`)
       }
-
-
     }
   })
 }
