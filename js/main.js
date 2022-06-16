@@ -1,34 +1,24 @@
-$('form').submit(false);
-
-const div = $('#figure');
-const h2 = $('#titulo');
-const p = $('#texto');
-const datahtml = $('#date')
+$("form").submit(false);
 
 function apod() {
-
-  let date = $('#data').val();
-
   $.ajax({
-    url: `https://api.nasa.gov/planetary/apod?api_key=Iy0QFduErGyyBEM7saLdYK0ZtpfW35a1JfJtiCl0&date=${date}`,
+    url: `https://api.nasa.gov/planetary/apod?api_key=Iy0QFduErGyyBEM7saLdYK0ZtpfW35a1JfJtiCl0&date=${$(
+      "#data"
+    ).val()}`,
     success(resposta) {
-      let titulo = resposta.title;
-      let data = resposta.date;
-      let texto = resposta.explanation;
-      let img = resposta.url;
-      let video = resposta.media_type;
+      $("#titulo").html(resposta.title);
+      $("#texto").html(resposta.explanation);
+      $("#date").html(resposta.date);
 
-      h2.html(titulo);
-      p.html(texto);
-      datahtml.html(data);
-
-      if (video === 'video') {
-        div.html(`<iframe src="${video}" frameborder="0"  allowfullscreen=""></iframe>`)
+      if (resposta.media_type === "video") {
+        $("#url").html(
+          `<iframe src="${resposta.url}" frameborder="0"  allowfullscreen=""></iframe>`
+        );
       } else {
-        div.html(`<img src="${img}">`)
+        $("#url").html(`<img src="${resposta.url}">`);
       }
-    }
-  })
+    },
+  });
 }
 
 apod();
